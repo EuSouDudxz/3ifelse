@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <script>
+        // Função para verificar se o número é par ou ímpar
+        function verificarParOuImpar(num) {
+            return num % 2 === 0 ? 'par' : 'ímpar';
+        }
+
+        // Função para verificar se o número é positivo ou negativo
+        function verificarPositivoOuNegativo(num) {
+            return num >= 0 ? 'positivo' : 'negativo';
+        }
+
+        // Função para verificar se o número é inteiro ou decimal
+        function verificarInteiroOuDecimal(num) {
+            return Number.isInteger(num) ? 'inteiro' : 'decimal';
+        }
+
+        // Entrada de Dados
+        let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+        let numero2 = parseFloat(prompt("Digite o segundo número:"));
+        let operacao = prompt("Qual operação deseja realizar? (soma, subtracao, multiplicacao, divisao)");
+
+        // Processamento
+        let resultado;
+        switch (operacao) {
+            case 'soma':
+                resultado = numero1 + numero2;
+                break;
+            case 'subtracao':
+                resultado = numero1 - numero2;
+                break;
+            case 'multiplicacao':
+                resultado = numero1 * numero2;
+                break;
+            case 'divisao':
+                resultado = numero2 !== 0 ? numero1 / numero2 : 'Divisão por zero não permitida.';
+                break;
+            default:
+                resultado = 'Operação inválida.';
+        }
+
+        // Saída de Dados
+        if (typeof resultado === 'number') {
+            alert(`Resultado: ${resultado}\nÉ ${verificarParOuImpar(resultado)}, ${verificarPositivoOuNegativo(resultado)} e ${verificarInteiroOuDecimal(resultado)}.`);
+        } else {
+            alert(resultado);
+        }
+    </script>
+</body>
+</html>

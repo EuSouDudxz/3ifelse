@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+<script>
+    //PROBLEMA: Vogal - Construa um programa que leia um caractere e informe se este caractere é uma vogal.
+
+    // Entrada de dados
+    let caractere = prompt("Digite um caractere:");
+
+    
+    // Processamento
+    // Processamento
+    let vogais = "AEIOUaeiou";
+        let mensagem;
+
+        if (caractere.length === 1 && vogais.includes(caractere)) {
+            mensagem = "O caractere é uma vogal.";
+        } else if (caractere.length === 1) {
+            mensagem = "O caractere não é uma vogal.";
+        } else {
+            mensagem = "Entrada inválida. Digite apenas um caractere.";
+        }
+
+    
+    // Saída de dados
+
+    alert(mensagem);
+
+</script>
